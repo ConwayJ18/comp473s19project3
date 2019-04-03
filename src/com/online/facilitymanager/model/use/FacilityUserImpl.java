@@ -7,9 +7,10 @@ public class FacilityUserImpl implements FacilityUser
 	private long userPhone;
 	private String userEmail;
 	private String userRole;
-	
+	private HashMap<UseRequest, Slot> schedule;
+
 	public FacilityUserImpl() {}
-	
+
 	/**
 	 * @param userID
 	 * @param userName
@@ -94,6 +95,20 @@ public class FacilityUserImpl implements FacilityUser
 	public void setUserRole(String userRole) {
 		this.userRole = userRole;
 	}
-	
-	
+
+	public HashMap<UseRequest, Slot> getSchedule()
+	{
+		return this.schedule;
+	}
+
+	public void setSchedule(HashMap<UseRequest, Slot> schedule)
+	{
+		for(UseRequest ur : schedule.keySet())
+		{
+			if(ur.getUser().equals(this)) //If the user owns an event
+			{
+				this.schedule.add(ur, schedule.get(ur)); //Add it to their personal schedule
+			}
+		}
+	}
 }

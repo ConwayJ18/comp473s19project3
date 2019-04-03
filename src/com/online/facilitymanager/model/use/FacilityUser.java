@@ -12,4 +12,6 @@ public interface FacilityUser
 	public void setUserEmail(String userEmail);
 	public String getUserRole();
 	public void setUserRole(String userRole);
+	public HashMap<UseRequest, Slot> getSchedule();
+	public void setSchedule(HashMap<UseRequest, Slot> schedule);
 }

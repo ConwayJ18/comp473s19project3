@@ -6,7 +6,7 @@ public class InspectionImpl implements Inspection
 {
 	private String inspectionType;
 	private Slot slot;
-	
+
 	public InspectionImpl() {}
 
 	/**
@@ -49,5 +49,5 @@ public class InspectionImpl implements Inspection
 	public void setSlot(Slot slot)
 	{
 		this.slot = slot;
-	}	
+	}
 }

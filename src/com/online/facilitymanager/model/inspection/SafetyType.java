@@ -1,7 +1,9 @@
+package com.online.facilitymanager.model.inspection;
+
 public class SafetyType implements InspectionType
 {
     @Override
-    public String inspectionType
+    public String inspectionType()
     {
       return "Safety";
     }

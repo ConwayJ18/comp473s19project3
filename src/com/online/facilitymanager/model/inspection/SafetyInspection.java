@@ -1,8 +1,10 @@
-public class FireInspection extends Inspection
+package com.online.facilitymanager.model.inspection;
+
+import com.online.facilitymanager.model.slot.Slot;
+
+public class SafetyInspection extends Inspection
 {
-    public SafetyInspection(InspectionType type, Slot slot)
-    {
-      public SafetyInspection() {
+	SafetyInspection() {
         super();
       }
 
@@ -18,15 +20,15 @@ public class FireInspection extends Inspection
       /**
        * @return the inspectionType
        */
-      public String getInspectionType()
+      public InspectionType getInspectionType()
       {
-        return "Safety";
+        return new SafetyType();
       }
 
       /**
        * @param inspectionType the inspectionType to set
        */
-      public void inspectionType(InspectionType inspectionType)
+      public void setInspectionType(InspectionType inspectionType)
       {
         this.inspectionType = inspectionType;
       }
@@ -46,5 +48,4 @@ public class FireInspection extends Inspection
       {
         this.slot = slot;
       }
-    }
-}
+ }

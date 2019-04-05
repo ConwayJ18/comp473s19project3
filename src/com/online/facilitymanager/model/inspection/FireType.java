@@ -1,7 +1,9 @@
+package com.online.facilitymanager.model.inspection;
+
 public class FireType implements InspectionType
 {
     @Override
-    public String inspectionType
+    public String inspectionType()
     {
       return "Fire";
     }

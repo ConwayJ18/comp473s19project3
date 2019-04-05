@@ -1,7 +1,11 @@
-public class Inspection
+package com.online.facilitymanager.model.inspection;
+
+import com.online.facilitymanager.model.slot.Slot;
+
+public abstract class Inspection
 {
   protected InspectionType inspectionType;
-	private Slot slot;
+  protected Slot slot;
 
 	public Inspection() {}
 
@@ -18,22 +22,12 @@ public class Inspection
   /**
    * @return the inspectionType
    */
-  abstract public String getInspectionType();
+  abstract public InspectionType getInspectionType();
 
   /**
    * @param inspectionType the inspectionType to set
    */
-  abstract public void inspectionType(InspectionType inspectionType);
-
-  /**
-   * @return the stringType
-   */
-  abstract public String getStringType();
-
-  /**
-   * @param stringType the stringType to set
-   */
-  abstract public void setStringType(String stringType);
+  abstract public void setInspectionType(InspectionType inspectionType);
 
   /**
    * @return the slot

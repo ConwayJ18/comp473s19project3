@@ -2,9 +2,9 @@ package com.online.facilitymanager.model.inspection;
 
 import com.online.facilitymanager.model.slot.Slot;
 
-public class InspectionImpl implements Inspection
+public class InspectionImpl extends Inspection
 {
-	private String inspectionType;
+	private InspectionType inspectionType;
 	private Slot slot;
 
 	public InspectionImpl() {}
@@ -13,7 +13,7 @@ public class InspectionImpl implements Inspection
 	 * @param inspectionType
 	 * @param slot
 	 */
-	public InspectionImpl(String inspectionType, Slot slot)
+	public InspectionImpl(InspectionType inspectionType, Slot slot)
 	{
 		this.inspectionType = inspectionType;
 		this.slot = slot;
@@ -22,15 +22,17 @@ public class InspectionImpl implements Inspection
 	/**
 	 * @return the inspectionType
 	 */
-	public String getInspectionType()
+	@Override
+	public InspectionType getInspectionType()
 	{
-		return inspectionType;
+		return this.inspectionType;
 	}
 
 	/**
 	 * @param inspectionType the inspectionType to set
 	 */
-	public void setInspectionType(String inspectionType)
+	@Override
+	public void setInspectionType(InspectionType inspectionType)
 	{
 		this.inspectionType = inspectionType;
 	}

@@ -1,3 +1,7 @@
+package com.online.facilitymanager.model.inspection;
+
+import com.online.facilitymanager.model.slot.Slot;
+
 public class FireInspection extends Inspection
 {
       public FireInspection() {
@@ -40,9 +44,9 @@ public class FireInspection extends Inspection
       /**
        * @param slot the slot to set
        */
+      @Override
       public void setSlot(Slot slot)
       {
         this.slot = slot;
       }
-    }
 }
